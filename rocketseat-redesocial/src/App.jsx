@@ -1,7 +1,10 @@
+import { Posts } from './Posts'
+
 export function App() {
   return (
     <div>
-        Pagina principal
+
+      <Posts />
     </div>
   )
 }
