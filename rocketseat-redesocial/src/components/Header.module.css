@@ -1,8 +1,7 @@
 .header {
-    background: #333;
-    height:80px;
+    background: var(--gray-800);
+    padding: 1.25rem 0;
     color: white;
     display:flex;
-    align-items: center;
     justify-content: center;
 }
