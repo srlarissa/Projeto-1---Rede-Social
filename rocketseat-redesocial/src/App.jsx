@@ -10,11 +10,9 @@ export function App() {
       <Header />
       <div className={styles.wrapper}>
         <Sidebar />
-        <main>
-            <Post 
-              author="Larissa Soares Reis"
-              content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis asperiores dicta alias totam facilis? Laboriosam eum sint cumque eaque maiores aperiam doloribus, voluptates a ab molestiae voluptate quo ipsum vitae."
-            />
+          <main>
+            <Post />
+            <Post />
           </main>
       </div>
     </div>
