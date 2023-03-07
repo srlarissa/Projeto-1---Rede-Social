@@ -56,13 +56,20 @@
 
 .authorInfo strong {
     display: block;
-    color: var(--grey-100);
+    color: var(--gray-100);
     line-height: 1.6;
 }
 
 .authorInfo span {
     display: block;
-    color: var(--grey-600);
+    color: var(--gray-400);
     font-size: 0.875rem;
     line-height: 1.6;
+}
+
+.commentForm {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-600);
 }
