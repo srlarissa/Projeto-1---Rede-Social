@@ -16,10 +16,22 @@ export function Post() {
                     </div>
                 </div>
 
-              <time dateTime='2023-03-07 16:00:00'>
+              <time title="07 de Março às 16h" dateTime='2023-03-07 16:00:00'>
                 Publicado há 1h
               </time>
+    
             </header>
+
+            <div className={styles.content}>
+                <p>Falaaa Galera!</p>
+                <p>Acabei de subir mais um projeto pro meu portifa. É um projeto que fiz no NLW Return, evento da doctorcare.</p>
+                <p><a href="#">jane.design/doctorcare</a></p>
+                <p>
+                    <a href="#">#novoprojeto</a>{" "}
+                    <a href="#">#nlw</a>{" "}
+                    <a href="#">#rocketseat</a>
+                </p>
+            </div>
         </article>
     )
     
