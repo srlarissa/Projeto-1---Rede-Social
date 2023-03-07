@@ -4,4 +4,10 @@
     color: white;
     display:flex;
     justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header img {
+    height: 2rem;
 }
