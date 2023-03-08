@@ -10,3 +10,7 @@
     height: 3rem;
     border-radius: 8px;
 }
+
+.commentBox {
+    flex: 1;
+}
