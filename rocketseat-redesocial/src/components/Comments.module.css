@@ -26,4 +26,11 @@
     align-items: center;
     justify-content: space-between;
 }
+ 
+.authorAndTime strong {
+    display: block;
+}
 
+.authorAndTime time {
+    display: block;
+}
