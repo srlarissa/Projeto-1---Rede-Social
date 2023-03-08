@@ -46,6 +46,8 @@ export function Post() {
 
             <div className={styles.commentList}>
                 <Comments />
+                <Comments />
+                <Comments />
             </div>
         </article>
     )
