@@ -11,7 +11,6 @@ export function Sidebar(){
             />
             <div className={styles.profile}>
                 <Avatar 
-                    hasBorder={true}
                     src="https://github.com/srlarissa.png" 
                 />
                 <strong>Larissa Soares Reis</strong>
