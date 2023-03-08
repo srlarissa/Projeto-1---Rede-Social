@@ -18,10 +18,10 @@ export function Comments() {
                             >
                                 Cerca de 1h atrás
                             </time>
-                            <button title="Deletar comentário">
-                                <Trash />
-                            </button>
                         </div>
+                        <button title="Deletar comentário">
+                            <Trash />
+                        </button>
                     </header>
                     <p>Muito bom Devon! Parabéns!</p>
                 </div>
