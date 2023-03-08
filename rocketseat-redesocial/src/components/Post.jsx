@@ -9,6 +9,7 @@ export function Post() {
 
                 <div className={styles.author}>
                     <Avatar
+                        hasBorder={true}
                         src="https://github.com/srlarissa.png" 
                     />
                     <div className={styles.authorInfo}>
