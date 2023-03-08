@@ -23,7 +23,7 @@
 
 .commentContent header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
  
@@ -38,4 +38,17 @@
     display: block;
     line-height: 1.6;
     color: var(--gray-400);
+}
+
+.commentContent header button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-400);
+    cursor: pointer;
+    line-height: 0;
+    border-radius: 2px;
+}
+
+.commentContent header button:hover {
+    color: var(--red-500);
 }
