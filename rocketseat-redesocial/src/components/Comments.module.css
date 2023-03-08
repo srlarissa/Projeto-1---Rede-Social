@@ -28,9 +28,14 @@
 }
  
 .authorAndTime strong {
+    font-size: 0.875rem;
     display: block;
+    line-height: 1.6;
 }
 
 .authorAndTime time {
+    font-size: 0.75rem;
     display: block;
+    line-height: 1.6;
+    color: var(--gray-400);
 }
