@@ -52,3 +52,8 @@
 .commentContent header button:hover {
     color: var(--red-500);
 }
+
+.commentContent p {
+    margin-top: 1rem;
+    color: var(--gray-300);
+}
