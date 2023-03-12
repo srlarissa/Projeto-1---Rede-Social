@@ -28,7 +28,7 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
                     </div>
                 </div>
 
-              <time title={publishedAt}>
+              <time title={publishedAt} dateTime={publishedAt.toISOString()}>
                 {publishedDateRelativeToNow}
               </time>
     
