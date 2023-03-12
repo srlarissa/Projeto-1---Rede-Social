@@ -3,6 +3,13 @@ import { Comments } from './Comments';
 import styles from './Post.module.css';
 
 export function Post({ name, role, content, publishedAt, avatarURL }) {
+    const publishedDateFormated = new Intl.DateTimeFormat('pt-br',{
+        day: '2-digit',
+        month: 'long',
+        hour: '2-digit',
+        minute: '2-digit'
+    }).format(publishedAt);
+    
     return(
         <article className={styles.post}>
             <header>
@@ -18,7 +25,7 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
                 </div>
 
               <time title={publishedAt}>
-                Publicado há 1h
+                {publishedDateFormated}
               </time>
     
             </header>
