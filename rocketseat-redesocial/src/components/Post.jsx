@@ -3,15 +3,20 @@ import ptBR from 'date-fns/locale/pt-BR';
 import { Avatar } from './Avatar';
 import { Comments } from './Comments';
 import styles from './Post.module.css';
-
-const comments = [
-    1,
-    2,
-    3
-]
-
+import { useState } from 'react';
 
 export function Post({ name, role, content, publishedAt, avatarURL }) {
+
+    function handleCreateNewComment() {
+        event.preventDefault()
+        setComments([...comments, newCommentText]);
+        setNewCommentText("");
+    }
+
+    function handleNewCommentChange() {
+        setNewCommentText(event.target.value);
+    }
+
     const publishedDateFormated = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'",{
         locale: ptBR
     })
@@ -21,9 +26,11 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
         addSuffix: true
     })
 
-    function handleCreateNewComment() {
-        console.log("oi");
-    }
+    const [ comments, setComments ] = useState([
+       'Post muito bacana, hein?!'
+    ]);
+
+    const [ newCommentText, setNewCommentText ] = useState('');
 
     return(
         <article className={styles.post}>
@@ -61,8 +68,11 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
 
             <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
                 <strong>Deixe seu feedback</strong>
-                <textarea 
+                <textarea
+                    name='comment' 
                     placeholder='Deixe um comentário'
+                    onChange={handleNewCommentChange}
+                    value={newCommentText}
                 />
                 <footer>
                     <button type='submit'>Publicar</button>
@@ -72,7 +82,7 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
             <div className={styles.commentList}>
                 {comments.map(comment => {
                     return(
-                        <Comments />
+                        <Comments content={comment}/>
                     );
                 })}
             </div>
