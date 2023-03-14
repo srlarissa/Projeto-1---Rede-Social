@@ -56,11 +56,11 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
                 {content.map(line => {
                     if (line.type == 'paragraph'){
                         return(
-                            <p>{line.content}</p>
+                            <p key={line.content}>{line.content}</p>
                         )
                     } else if (line.type == 'link'){
                         return(
-                            <p><a href="#">{line.content}</a></p>
+                            <p key={line.content}><a href="#">{line.content}</a></p>
                         )
                     }
                 })}
