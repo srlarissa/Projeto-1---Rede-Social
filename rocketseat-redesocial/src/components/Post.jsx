@@ -4,6 +4,13 @@ import { Avatar } from './Avatar';
 import { Comments } from './Comments';
 import styles from './Post.module.css';
 
+const comments = [
+    1,
+    2,
+    3
+]
+
+
 export function Post({ name, role, content, publishedAt, avatarURL }) {
     const publishedDateFormated = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'",{
         locale: ptBR
@@ -13,7 +20,7 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
         locale: ptBR,
         addSuffix: true
     })
-
+    
     return(
         <article className={styles.post}>
             <header>
@@ -59,9 +66,11 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
             </form>
 
             <div className={styles.commentList}>
-                <Comments />
-                <Comments />
-                <Comments />
+                {comments.map(comment => {
+                    return(
+                        <Comments />
+                    );
+                })}
             </div>
         </article>
     )
