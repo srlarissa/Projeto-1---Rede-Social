@@ -82,7 +82,7 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
             <div className={styles.commentList}>
                 {comments.map(comment => {
                     return(
-                        <Comments content={comment}/>
+                        <Comments key={comment} content={comment}/>
                     );
                 })}
             </div>
