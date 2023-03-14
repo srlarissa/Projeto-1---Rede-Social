@@ -20,7 +20,11 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
         locale: ptBR,
         addSuffix: true
     })
-    
+
+    function handleCreateNewComment() {
+        console.log("oi");
+    }
+
     return(
         <article className={styles.post}>
             <header>
@@ -55,7 +59,7 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
                 })}
             </div>
 
-            <form className={styles.commentForm}>
+            <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
                 <strong>Deixe seu feedback</strong>
                 <textarea 
                     placeholder='Deixe um comentário'
