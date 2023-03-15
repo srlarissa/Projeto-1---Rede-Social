@@ -14,6 +14,7 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
     }
 
     function handleNewCommentChange() {
+        event.target.setCustomValidity('');
         setNewCommentText(event.target.value);
     }
 
@@ -22,6 +23,10 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
             return comment !== commentToDelete
         });
         setComments(listWithoutDeletedOne);
+    }
+
+    function handleNewCommentInvalid() {
+        event.target.setCustomValidity('Esse campo é obrigatório!')
     }
 
     const publishedDateFormated = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'",{
@@ -80,9 +85,11 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
                     placeholder='Deixe um comentário'
                     onChange={handleNewCommentChange}
                     value={newCommentText}
+                    onInvalid={handleNewCommentInvalid}
+                    required
                 />
                 <footer>
-                    <button type='submit'>Publicar</button>
+                    <button type='submit' disabled={newCommentText.length === 0}>Publicar</button>
                 </footer>
             </form>
 
