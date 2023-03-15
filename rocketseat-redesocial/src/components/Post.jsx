@@ -44,6 +44,8 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
 
     const [ newCommentText, setNewCommentText ] = useState('');
 
+    const isNewCommentEmpty = newCommentText.length === 0;
+
     return(
         <article className={styles.post}>
             <header>
@@ -89,7 +91,7 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
                     required
                 />
                 <footer>
-                    <button type='submit' disabled={newCommentText.length === 0}>Publicar</button>
+                    <button type='submit' disabled={isNewCommentEmpty}>Publicar</button>
                 </footer>
             </form>
 
