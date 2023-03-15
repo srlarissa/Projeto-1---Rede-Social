@@ -14,7 +14,7 @@ const posts = [
     content: [
       {type: 'paragraph', content: 'Falaaa galera!'},
       {type: 'paragraph', content: 'Acabei de subir mais um projeto para o meu portifa. É um projeto feito junto a rocketseat chamado doctorcare.'},
-      {type: 'link', content: 'jane.design/doctorcare'}
+      {type: 'link', content: 'github.com/srlarissa'}
     ],
     publishedAt: new Date('2023-03-08 21:44:00')
   },
@@ -27,7 +27,7 @@ const posts = [
     content: [
       {type: 'paragraph', content: 'Falaaa galera!'},
       {type: 'paragraph', content: 'Acabei de subir mais um projeto para o meu portifa. É um projeto feito junto a rocketseat chamado doctorcare.'},
-      {type: 'link', content: 'jane.design/doctorcare'}
+      {type: 'link', content: 'github.com/diego78795'}
     ],
     publishedAt: new Date('2023-03-08 21:10:00')
   },

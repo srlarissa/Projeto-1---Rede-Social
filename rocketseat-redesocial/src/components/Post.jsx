@@ -74,7 +74,7 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
                         )
                     } else if (line.type == 'link'){
                         return(
-                            <p key={line.content}><a href="#">{line.content}</a></p>
+                            <p key={line.content}><a target="_blank" href={'https://' + line.content}>{line.content}</a></p>
                         )
                     }
                 })}
