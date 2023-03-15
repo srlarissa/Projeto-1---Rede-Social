@@ -4,7 +4,6 @@ import styles from './Comments.module.css';
 
 export function Comments({ content, onDeleteComment }) {
     function handleDeleteComment() {
-        console.log('deletar');
         onDeleteComment(content);
     }
     return(
