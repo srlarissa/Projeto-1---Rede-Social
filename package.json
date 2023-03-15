@@ -2,5 +2,12 @@
   "dependencies": {
     "date-fns": "^2.29.3",
     "phosphor-react": "^1.4.1"
+  },
+
+  "husky": {
+    "hooks":{
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
