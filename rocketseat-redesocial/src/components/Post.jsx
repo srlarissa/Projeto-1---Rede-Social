@@ -17,6 +17,10 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
         setNewCommentText(event.target.value);
     }
 
+    function onDeleteComment(comment) {
+        console.log(`Deletar o comentário ${comment}`);
+    }
+
     const publishedDateFormated = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'",{
         locale: ptBR
     })
@@ -82,7 +86,11 @@ export function Post({ name, role, content, publishedAt, avatarURL }) {
             <div className={styles.commentList}>
                 {comments.map(comment => {
                     return(
-                        <Comments key={comment} content={comment}/>
+                        <Comments 
+                            key={comment} 
+                            content={comment} 
+                            onDeleteComment={onDeleteComment}
+                        />
                     );
                 })}
             </div>

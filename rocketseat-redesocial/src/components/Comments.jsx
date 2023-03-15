@@ -2,9 +2,10 @@ import { Avatar } from './Avatar';
 import { ThumbsUp, Trash } from 'phosphor-react';
 import styles from './Comments.module.css';
 
-export function Comments({ content }) {
+export function Comments({ content, onDeleteComment }) {
     function handleDeleteComment() {
         console.log('deletar');
+        onDeleteComment(content);
     }
     return(
         <div className={styles.comment}>
